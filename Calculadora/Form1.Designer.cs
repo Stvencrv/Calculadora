@@ -81,7 +81,6 @@ namespace Calculadora
             this.BtnPunto.TabIndex = 3;
             this.BtnPunto.Text = ".";
             this.BtnPunto.UseVisualStyleBackColor = true;
-            this.BtnPunto.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnN1
             // 
@@ -190,7 +189,6 @@ namespace Calculadora
             this.BtnResultado.TabIndex = 15;
             this.BtnResultado.Text = "=";
             this.BtnResultado.UseVisualStyleBackColor = true;
-            this.BtnResultado.Click += new System.EventHandler(this.button13_Click);
             // 
             // BtnBack
             // 
@@ -211,7 +209,7 @@ namespace Calculadora
             this.BtnDivision.TabIndex = 13;
             this.BtnDivision.Text = "/";
             this.BtnDivision.UseVisualStyleBackColor = true;
-            this.BtnDivision.Click += new System.EventHandler(this.button15_Click);
+            this.BtnDivision.Click += new System.EventHandler(this.BtnDivision_Click);
             // 
             // BtnSuma
             // 
@@ -222,7 +220,7 @@ namespace Calculadora
             this.BtnSuma.TabIndex = 12;
             this.BtnSuma.Text = "+";
             this.BtnSuma.UseVisualStyleBackColor = true;
-            this.BtnSuma.Click += new System.EventHandler(this.button16_Click);
+            this.BtnSuma.Click += new System.EventHandler(this.BtnSuma_Click);
             // 
             // BtnResta
             // 
@@ -233,6 +231,7 @@ namespace Calculadora
             this.BtnResta.TabIndex = 17;
             this.BtnResta.Text = "-";
             this.BtnResta.UseVisualStyleBackColor = true;
+            this.BtnResta.Click += new System.EventHandler(this.BtnResta_Click);
             // 
             // BtnMult
             // 
@@ -243,6 +242,7 @@ namespace Calculadora
             this.BtnMult.TabIndex = 16;
             this.BtnMult.Text = "*";
             this.BtnMult.UseVisualStyleBackColor = true;
+            this.BtnMult.Click += new System.EventHandler(this.BtnMult_Click);
             // 
             // TxbPantalla
             // 

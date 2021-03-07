@@ -12,10 +12,15 @@ namespace Calculadora
 {
     public partial class Form1 : Form
     {
+
+        double primero;
+        double segundo;
+        string operador;
         public Form1()
         {
             InitializeComponent();
         }
+        Clases.ClsSuma obj = new Clases.ClsSuma();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -35,26 +40,6 @@ namespace Calculadora
         private void button7_Click(object sender, EventArgs e)
         {
             TxbPantalla.Text = TxbPantalla.Text + "5";
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -95,6 +80,34 @@ namespace Calculadora
         private void BtnN8_Click(object sender, EventArgs e)
         {
             TxbPantalla.Text = TxbPantalla.Text + "8";
+        }
+
+        private void BtnSuma_Click(object sender, EventArgs e)
+        {
+            operador = "+";
+            primero = double.Parse(TxbPantalla.Text);
+            TxbPantalla.Clear();
+        }
+
+        private void BtnResta_Click(object sender, EventArgs e)
+        {
+            operador = "-";
+            primero = double.Parse(TxbPantalla.Text);
+            TxbPantalla.Clear();
+        }
+
+        private void BtnMult_Click(object sender, EventArgs e)
+        {
+            operador = "*";
+            primero = double.Parse(TxbPantalla.Text);
+            TxbPantalla.Clear();
+        }
+
+        private void BtnDivision_Click(object sender, EventArgs e)
+        {
+            operador = "/";
+            primero = double.Parse(TxbPantalla.Text);
+            TxbPantalla.Clear();
         }
     }
 }
