@@ -81,6 +81,7 @@ namespace Calculadora
             this.BtnPunto.TabIndex = 3;
             this.BtnPunto.Text = ".";
             this.BtnPunto.UseVisualStyleBackColor = true;
+            this.BtnPunto.Click += new System.EventHandler(this.BtnPunto_Click);
             // 
             // BtnN1
             // 
@@ -146,6 +147,7 @@ namespace Calculadora
             this.BtnBorrar.TabIndex = 11;
             this.BtnBorrar.Text = "CE";
             this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // BtnN3
             // 
@@ -189,6 +191,7 @@ namespace Calculadora
             this.BtnResultado.TabIndex = 15;
             this.BtnResultado.Text = "=";
             this.BtnResultado.UseVisualStyleBackColor = true;
+            this.BtnResultado.Click += new System.EventHandler(this.BtnResultado_Click);
             // 
             // BtnBack
             // 
@@ -199,6 +202,7 @@ namespace Calculadora
             this.BtnBack.TabIndex = 14;
             this.BtnBack.Text = "←";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnDivision
             // 

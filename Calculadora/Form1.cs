@@ -21,6 +21,9 @@ namespace Calculadora
             InitializeComponent();
         }
         Clases.ClsSuma obj = new Clases.ClsSuma();
+        Clases.ClsResta obj2 = new Clases.ClsResta();
+        Clases.ClsMult obj3 = new Clases.ClsMult();
+        Clases.ClsDiv obj4 = new Clases.ClsDiv();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -86,7 +89,7 @@ namespace Calculadora
         {
             operador = "+";
             primero = double.Parse(TxbPantalla.Text);
-            TxbPantalla.Clear();
+            TxbPantalla.Clear();  
         }
 
         private void BtnResta_Click(object sender, EventArgs e)
@@ -108,6 +111,68 @@ namespace Calculadora
             operador = "/";
             primero = double.Parse(TxbPantalla.Text);
             TxbPantalla.Clear();
+        }
+
+        private void BtnResultado_Click(object sender, EventArgs e)
+        {
+            segundo = double.Parse(TxbPantalla.Text);
+       
+            double suma;
+            double resta;
+            double multi;
+            double div;
+
+            switch (operador)
+            {
+                case "+":
+                    suma = obj.sumar((primero) , (segundo));
+                    TxbPantalla.Text = suma.ToString();
+                    break;
+
+                case "-":
+                    resta = obj2.restar((primero), (segundo));
+                    TxbPantalla.Text = resta.ToString();
+                    break;
+
+                case "*":
+                    multi = obj3.multiplicar((primero), (segundo));
+                    TxbPantalla.Text = multi.ToString();
+                    break;
+                case "/":
+                    div = obj4.dividir((primero), (segundo));
+                    TxbPantalla.Text = div.ToString();
+                    break;
+            }
+
+        }
+
+        private void BtnPunto_Click(object sender, EventArgs e)
+        {
+            TxbPantalla.Text = TxbPantalla.Text + ".";
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            TxbPantalla.Clear();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            if (TxbPantalla.TextLength == 1)
+            {
+                TxbPantalla.Text = null;
+            }
+            else
+            {
+                if (TxbPantalla.TextLength == 0)
+                {
+                    TxbPantalla.Text = "";
+                }
+                else
+                {
+                    TxbPantalla.Text = TxbPantalla.Text.Substring(0, TxbPantalla.TextLength - 1);
+                }
+            }
         }
     }
 }
