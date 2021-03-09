@@ -13,8 +13,8 @@ namespace Calculadora
     public partial class Form1 : Form
     {
 
-        double primero;
-        double segundo;
+        double Num1;
+        double Num2;
         string operador;
         public Form1()
         {
@@ -88,34 +88,34 @@ namespace Calculadora
         private void BtnSuma_Click(object sender, EventArgs e)
         {
             operador = "+";
-            primero = double.Parse(TxbPantalla.Text);
+            Num1 = double.Parse(TxbPantalla.Text);
             TxbPantalla.Clear();  
         }
 
         private void BtnResta_Click(object sender, EventArgs e)
         {
             operador = "-";
-            primero = double.Parse(TxbPantalla.Text);
+            Num1 = double.Parse(TxbPantalla.Text);
             TxbPantalla.Clear();
         }
 
         private void BtnMult_Click(object sender, EventArgs e)
         {
             operador = "*";
-            primero = double.Parse(TxbPantalla.Text);
+            Num1 = double.Parse(TxbPantalla.Text);
             TxbPantalla.Clear();
         }
 
         private void BtnDivision_Click(object sender, EventArgs e)
         {
             operador = "/";
-            primero = double.Parse(TxbPantalla.Text);
+            Num1 = double.Parse(TxbPantalla.Text);
             TxbPantalla.Clear();
         }
 
         private void BtnResultado_Click(object sender, EventArgs e)
         {
-            segundo = double.Parse(TxbPantalla.Text);
+            Num2 = double.Parse(TxbPantalla.Text);
        
             double suma;
             double resta;
@@ -125,21 +125,21 @@ namespace Calculadora
             switch (operador)
             {
                 case "+":
-                    suma = obj.sumar((primero) , (segundo));
+                    suma = obj.sumar((Num1) , (Num2));
                     TxbPantalla.Text = suma.ToString();
                     break;
 
                 case "-":
-                    resta = obj2.restar((primero), (segundo));
+                    resta = obj2.restar((Num1), (Num2));
                     TxbPantalla.Text = resta.ToString();
                     break;
 
                 case "*":
-                    multi = obj3.multiplicar((primero), (segundo));
+                    multi = obj3.multiplicar((Num1), (Num2));
                     TxbPantalla.Text = multi.ToString();
                     break;
                 case "/":
-                    div = obj4.dividir((primero), (segundo));
+                    div = obj4.dividir((Num1), (Num2));
                     TxbPantalla.Text = div.ToString();
                     break;
             }
@@ -148,7 +148,7 @@ namespace Calculadora
 
         private void BtnPunto_Click(object sender, EventArgs e)
         {
-            TxbPantalla.Text = TxbPantalla.Text + ".";
+            TxbPantalla.Text = TxbPantalla.Text + ",";
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)
